@@ -87,8 +87,8 @@ class Fab extends Component {
 
     return merge(
       this.getInitialStyle().buttonStyle,
-      StyleSheet.flatten(child.props.style),
-      type
+      type,
+      StyleSheet.flatten(child.props.style)
     );
   }
 
@@ -211,7 +211,7 @@ class Fab extends Component {
               : 5
             : i * 50 + 65,
         left: 8,
-        right: 0
+        right: 40
       };
     } else if (direction === DIRECTION.LEFT) {
       return {
